@@ -2,8 +2,8 @@
   "name": "blog_app",
   "version": "0.1.0",
   "private": true,
-  "api_base_url": "https://localhost:7283/api",
-  "file_base_url": "https://localhost:3000/",
+  "api_base_url": "https://applicationblog20230829172318.azurewebsites.net/api",
+  "file_base_url": "https://applicationblog-74308.web.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
