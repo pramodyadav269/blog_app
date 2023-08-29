@@ -162,7 +162,7 @@ function Register() {
                 .catch((error) => {
                     debugger
                     console.log(error);
-                    alert("Error: Something went wrong, please try again");
+                    alert("Error: Something went wrong, please try again.");
                 });
             }
             catch (error) {
