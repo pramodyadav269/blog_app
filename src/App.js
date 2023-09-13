@@ -69,3 +69,32 @@ export default App;
 //   name: 'Pramod'  
 // }
 
+/*
+Problem Statement
+Building a Scalable and Reliable Web Application on AWS
+
+Description
+You are tasked with architecting and implementing a web application hosted on AWS that needs to be highly scalable, reliable, and maintainable. The application should handle a significant number of concurrent users and traffic fluctuations.
+
+User Stories
+1.	You are to design the Solution Architecture for the demo system.
+2.	Frontend: Deploy a static website on AWS S3 and serve it via AWS CloudFront.
+3.	Backend: Deploy a highly available and resilient Nginx Service with AWS EC2 Services
+4.	Setup CI/CD Pipeline using GitHub & AWS CodePipeline for the static website described in #2
+5.	Setup Observability solutions 
+a.	Monitor the health of various infrastructure components through a custom built CloudWatch Dashboard e.g.: AWS EC2, AWS ELB.
+b.	Creating alarms for AWS Service metrics ego: 5xx errors exceeds a threshold limit.
+
+Guidelines
+6.	Infrastructure as Code (IaC): Use AWS CloudFormation to provision and manage the required resources.
+7.	High Availability: Implement an architecture that ensures high availability across multiple availability zones to prevent single points of failure.
+8.	Auto Scaling: Configure auto-scaling policies to automatically adjust resources based on traffic load.
+9.	Monitoring and Alerting: Set up monitoring for key performance metrics and configure alerts to notify when thresholds are breached.
+10.	Logging and Troubleshooting: Implement logging mechanisms to assist in debugging and troubleshooting issues.
+11.	Continuous Integration/Continuous Deployment (CI/CD): Create a CI/CD pipeline that automatically deploys changes to the application while ensuring safety and minimizing downtime.
+12.	Security and Access Control: Implement appropriate security measures, including IAM roles, security groups, and encryption, to safeguard the application and data.
+
+Evaluation
+You will be evaluated based on your ability to design a scalable, reliable, and maintainable infrastructure on AWS. Key aspects include proper use of AWS services, adherence to best practices, automation, and security considerations. Additionally, you will be assessed on your approach to handling failure scenarios and troubleshooting capabilities.
+
+*/
