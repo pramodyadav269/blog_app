@@ -97,7 +97,7 @@ Guidelines
 Evaluation
 You will be evaluated based on your ability to design a scalable, reliable, and maintainable infrastructure on AWS. Key aspects include proper use of AWS services, adherence to best practices, automation, and security considerations. Additionally, you will be assessed on your approach to handling failure scenarios and troubleshooting capabilities.
 
-Q -> install nginx on windows server 2022 using user data script.
+Q -> install nginx on windows server 2022 using user data script..
 A ->
 <powershell>
 # Install Chocolatey (a package manager for Windows)
