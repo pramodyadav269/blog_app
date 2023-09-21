@@ -107,7 +107,7 @@ function Login() {
                                     SignUp
                                     </Link>* */}
                                     </div>
-                                    Learn CI/CD
+                                    
                                 </div>                                
                             </div>
                         </div>
