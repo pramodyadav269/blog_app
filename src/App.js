@@ -143,4 +143,11 @@ choco install nginx -y
    we'll get build failed error so click on "Edit stage" then click on edit icon in AWS CodeBuild 
 
 
+
+
+EC2 instance details
+
+34.207.104.189
+Administrator
+voZZNphEnvL$&zusdF20YFFmjPt((VP&
 */
