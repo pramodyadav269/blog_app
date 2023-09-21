@@ -107,3 +107,40 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco install nginx -y
 </powershell>
 */
+
+/* AWS CI/CD with react App steps
+
+1. Create S2 bucket with bucket policy
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::applicationblog-react-aws-s3/*"
+        },
+        {
+            "Sid": "Stmt1597860486271",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::700186024813:role/service-role/codebuild-buildproject_blog_app-service-role"
+            },
+            "Action": "*",
+            "Resource": "arn:aws:s3:::applicationblog-react-aws-s3/*"
+        }
+    ]
+}
+
+2. Create CloudFront Distributor
+3. Browse appliation with distributor name. if application is throwing "Access Denied" error then go to CloudFront and under ErrorPages "create custom error response" 
+4. Now create "CodePipeline" and click on "Create Pipeline" and skip deployment stage for time being.
+   we'll get build failed error so click on "Edit stage" then click on edit icon in AWS CodeBuild 
+
+
+*/
