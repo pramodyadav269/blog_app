@@ -8,7 +8,7 @@ import Login from './FunctionComponent/Login';
 import Blog from './FunctionComponent/Blog';
 import Home from './FunctionComponent/Home';
 import PageNotFound from './FunctionComponent/PageNotFound';
-import ShowHide from './FunctionComponent/ShowHide';
+
 //Comment section
 const App = () => {
   return (
