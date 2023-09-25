@@ -8,17 +8,18 @@ import Login from './FunctionComponent/Login';
 import Blog from './FunctionComponent/Blog';
 import Home from './FunctionComponent/Home';
 import PageNotFound from './FunctionComponent/PageNotFound';
+import ShowHide from './FunctionComponent/ShowHide';
 //Comment section
 const App = () => {
   return (
     <Router>
-      <Routes>
+      <Routes>        
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Login />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="*" element={<PageNotFound />} />        
       </Routes>
     </Router>
   );
@@ -145,7 +146,7 @@ choco install nginx -y
 
 
 
-EC2 instance details
+EC2 instance details:-
 
 34.207.104.189
 Administrator
