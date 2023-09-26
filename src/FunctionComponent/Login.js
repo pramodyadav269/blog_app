@@ -89,12 +89,12 @@ function Login() {
                                 <h1>Login Form</h1>
                                 <div className="container mt-3">
                                     <div className="mb-3 mt-3">
-                                        <label htmlFor="email">Email:-</label>
+                                        <label htmlFor="email">Email*:-</label>
                                         <input type="email" className="form-control" id="email" placeholder="Enter email"
                                             name="email" onChange={handleEmail} value={txtEmail}/>
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="pwd">Password:-</label>
+                                        <label htmlFor="pwd">Password*:-</label>
                                         <input type="password" className="form-control" id="pwd" placeholder="Enter password"
                                             onChange={handlePassword} value={txtPassword} name="pswd" />
                                     </div>
