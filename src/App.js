@@ -14,20 +14,21 @@ import UserLayout from './Layout/UserLayout';
 const App = () => {
   return (
     <Router>
+
       <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Login />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
 
-        <Route path="/" element={<UserLayout />}>
-          <Route index element={<Blog />} />          
+        <Route  element={<UserLayout />}>                  
           <Route path="/blog" element={<Blog />} />
           <Route path="/home" element={<Home />} />
         </Route>
 
       </Routes>
-    </Router>
+
+    </Router>  
   );
 };
 

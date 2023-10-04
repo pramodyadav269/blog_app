@@ -6,17 +6,16 @@ function Navbar() {
     const navigate = useNavigate();
 
     const Logout = () => {
+        debugger
         localStorage.removeItem('JWTToken');
         navigate("/login");
     }
 
-
-
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-info">
-                {/* <a className="navbar-brand" href="#" onClick={Logout}>Logout</a>*/}
-                <Link className="navbar-brand">Logout</Link>
+                <a className="navbar-brand" href="#" onClick={Logout}>Logout</a>
+                {/* <Link className="navbar-brand" onClick={Logout}>Logout</Link> */}
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

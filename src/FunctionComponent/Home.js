@@ -220,92 +220,10 @@ function Home() {
 
                 <div className="row profile-body">
                     
-                <SideBar {...objProps} />
+                    <SideBar {...objProps} />
                 
                     <div className="col-md-8 col-xl-6 middle-wrapper">
-                        <BindBlogPost action="personal"/>
-                        {/* <div className="row">
-                        {
-                            PostData.map((item) => {
-                            debugger
-                            if (item.postType === 'text') {
-                            return (
-                                <div className="col-md-12 grid-margin">
-                                    <div className="card rounded">
-                                        <div className="card-header">
-                                            <div className="d-flex align-items-center justify-content-between">
-                                                <div className="d-flex align-items-center">                                                    
-                                                    {item.profilePic && <img className="img-xs rounded-circle" src={item.profilePic} alt="" />}
-                                                    <div className="ml-2">
-                                                        <p>{item.firstname +' '+ item.lastname}</p>
-                                                        <p className="tx-11 text-muted">1 min ago</p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div className="card-body">
-                                            <p className="mb-3 tx-14">{item.postText}</p>                                                                                        
-                                        </div>
-                                        <div className="card-footer">
-                                            <div className="d-flex post-actions">
-                                                <a href="javascript:;" className="d-flex align-items-center text-muted mr-4">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-heart icon-md">
-                                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                                    </svg>
-                                                    <p className="d-none d-md-block ml-2">Like({item.likeCount})</p>
-                                                </a>
-                                                <a href="javascript:;" className="d-flex align-items-center text-muted mr-4">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-message-square icon-md">
-                                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                                                    </svg>
-                                                    <p className="d-none d-md-block ml-2">Comment({item.commentCount})</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                            } else if (item.postType === 'image') {
-                            return (
-                                <div className="col-md-12 grid-margin">
-                                    <div className="card rounded">
-                                        <div className="card-header">
-                                            <div className="d-flex align-items-center justify-content-between">
-                                                <div className="d-flex align-items-center">                                                    
-                                                    {item.profilePic && <img className="img-xs rounded-circle" src={item.profilePic} alt="" />}
-                                                    <div className="ml-2">
-                                                        <p>{item.firstname +' '+ item.lastname}</p>
-                                                        <p className="tx-11 text-muted">1 min ago</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="card-body">
-                                            <img className="img-fluid" style={{ width:"70%"}} src={item.postMediaPath} alt="" />
-                                        </div>
-                                        <div className="card-footer">
-                                            <div className="d-flex post-actions">
-                                                <a href="javascript:;" className="d-flex align-items-center text-muted mr-4">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-heart icon-md">
-                                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                                    </svg>
-                                                    <p className="d-none d-md-block ml-2">Like({item.likeCount})</p>
-                                                </a>
-                                                <a href="javascript:;" className="d-flex align-items-center text-muted mr-4">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-message-square icon-md">
-                                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                                                    </svg>
-                                                    <p className="d-none d-md-block ml-2">Comment({item.commentCount})</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                            }
-                            })}
-                        </div> */}
+                        <BindBlogPost action="personal"/>                        
                     </div>
                 </div>
             </div>
