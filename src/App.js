@@ -2,24 +2,30 @@
 import './App.css';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
 import Register from './FunctionComponent/Register';
 import Login from './FunctionComponent/Login';
 import Blog from './FunctionComponent/Blog';
 import Home from './FunctionComponent/Home';
 import PageNotFound from './FunctionComponent/PageNotFound';
+import UserLayout from './Layout/UserLayout';
 
 //Comment section
 const App = () => {
   return (
     <Router>
-      <Routes>       
+      <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Login />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="*" element={<PageNotFound />} />        
+        <Route path="*" element={<PageNotFound />} />
+
+        <Route path="/" element={<UserLayout />}>
+          <Route index element={<Blog />} />          
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/home" element={<Home />} />
+        </Route>
+
       </Routes>
     </Router>
   );
@@ -32,9 +38,9 @@ export default App;
 //     return (
 //       <>
 //         <h1>My Name is {this.props.name}</h1>
-//         <h1>My age is {this.props.age}</h1>        
-//         <h1>Marital status is {this.props.isMarried.toString()}</h1>  
-//       </>      
+//         <h1>My age is {this.props.age}</h1>
+//         <h1>Marital status is {this.props.isMarried.toString()}</h1>
+//       </>
 //     )
 //   }
 // }
@@ -67,6 +73,6 @@ export default App;
 //   isMarried: PropTypes.bool
 // }
 // App.defaultProps = {
-//   name: 'Pramod'  
+//   name: 'Pramod'
 // }
 

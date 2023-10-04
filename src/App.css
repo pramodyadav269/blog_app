@@ -23,6 +23,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(247, 211, 187, 0.881);
+  color: rgb(35, 32, 32);
+  text-align: center;
+}
+
+/* nav a.active{
+  color:red !important;
+} */
 
 .App-link {
   color: #61dafb;

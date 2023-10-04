@@ -417,7 +417,7 @@ function BindBlogPost(props) {
                             </div>
                         </div>
                         <div className="card-body">
-                            <p className="mb-3 tx-14">{item.postText}</p>                                                                                        
+                            <p className="mb-3 tx-14">{item.postText}</p>                
                         </div>
                         <div className="card-footer">
                             <div className="d-flex post-actions">       

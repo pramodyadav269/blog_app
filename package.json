@@ -2,7 +2,7 @@
   "name": "blog_app",
   "version": "0.1.0",
   "private": true,
-  "api_base_url": "https://applicationbloglti.azurewebsites.net/api",
+  "api_base_url": "https://localhost:7283/api",
   "file_base_url": "https://applicationblog-85678.web.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

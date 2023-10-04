@@ -3,8 +3,8 @@ import packageJson from '../../package.json';
 import { useNavigate } from 'react-router-dom';
 import background_pic from '../Content/images/default_bg_pic.jpg';
 import BindBlogPost from '../FunctionComponent/BindBlogPost';
-// import { ProfilePicAndName, ProfileSection } from './ProfileDetails';
-import Navbar from '../FunctionComponent/Navbar';
+import SideBar from './SideBar';
+import ProfileBackground from './ProfileBackground';
 
 function Blog() {
 
@@ -60,6 +60,7 @@ function Blog() {
     }
 
     const showHidePopup = (e, flag) => {
+        debugger;
         setIsPopupVisible(flag);
     };
     
@@ -254,124 +255,28 @@ function Blog() {
         setContentPostVisible(false);
     }
 
-    // const BindPosts = () => {
-    //     try {
-    //         //debugger            
-    //         fetch(baseAPIURL + '/Home/GetAllPost', {
-    //             method: "GET",
-    //             headers: {
-    //                 "Authorization": "Bearer " + jwtToken,
-    //                 "Content-Type": "application/json",
-    //             },
-    //         }).then((response) => {
-    //             //debugger
-    //             if (!response.ok) {
-    //                 if (response.status === 401) {
-    //                     navigate('/login');
-    //                 }
-    //                 else {
-    //                     alert("Error: Something went wrong, please try again");
-    //                 }
-    //             }
-    //             return response.json();
-    //         }).then((data) => {
-    //             //debugger
-    //             if (data != undefined && data.statusCode == "200") {
-    //                 if(data.lstDetails.length > 0){
-    //                     setPostData(data.lstDetails);
-    //                 }
-    //                 else{
-    //                     alert(data.description);    
-    //                 }                    
-    //             }
-    //             else{
-    //                 alert(data.description);
-    //             }
-                
-    //             // setProfilePic(data.profilePicPath.replace(/\\/g, '/'));
-    //             // setProfileName(data.firstname + ' ' + data.lastname);
-    //         })
-    //         .catch((error) => {
-    //             console.error(error);
-    //         }); 
-    //     }
-    //     catch (error) {
-    //         console.log(error);
-    //     }
-    // }
+    const objProps = {txtRegistered, txtCountry, txtEmail, txtGender, txtAbout, showHidePopup}
+    //const profileBackground = { background_pic, txtProfilePic, txtProfileName}
+    var profileBackground = {
+        background_pic: background_pic,
+        txtProfilePic: txtProfilePic,
+        txtProfileName: txtProfileName
+    };
 
     return (
 
         <>
-            <Navbar />
-
+           
             <div className="container">
-            <div className="profile-page tx-13">
+            <div className="profile-page tx-13">           
 
-                {/* <ProfilePicAndName /> */}
+                {/* <ProfileBackground {...profileBackground}/> */}
+                <ProfileBackground data={profileBackground}/>
 
-                <div className="row">
-                    <div className="col-12 grid-margin">
-                        <div className="profile-header">
-                            <div className="cover">
-                                <div className="gray-shade"></div>
-                                <figure>
-                                    <img src={background_pic} className="img-fluid" alt="profile cover" />
-                                </figure>
-                                <div className="cover-body d-flex justify-content-between align-items-center">
-                                    <div>
-                                        {txtProfilePic && <img className="profile-pic" src={txtProfilePic} alt="profile" />}
-                                        <span className="profile-name">{txtProfileName}</span>
-                                    </div>
-                                    <div className="d-none d-md-block">
-                                        <button className="btn btn-primary btn-icon-text btn-edit-profile">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-edit btn-icon-prepend">
-                                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                                            </svg> Edit profile
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="header-links"></div>
-                        </div>
-                    </div>
-                </div>
                 <div className="row profile-body">
 
-                    {/* <ProfileSection /> */}
-                    <div className="d-none d-md-block col-md-4 col-xl-3 left-wrapper">
-                        <div className="card rounded">
-                            <div className="card-body">
-                                <div className="d-flex align-items-center justify-content-between mb-2">
-                                    <h6 className="card-title mb-0">About</h6>
-                                </div>
-                                <span>{txtAbout}
-                                    <a href='#' onClick={(e) => showHidePopup(e,true)}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                                        </svg>
-                                    </a>
-                                </span>
-                                <div className="mt-3">
-                                    <label className="tx-11 font-weight-bold mb-0 text-uppercase">Joined:</label>
-                                    <p className="text-muted">{txtRegistered}</p>
-                                </div>
-                                <div className="mt-3">
-                                    <label className="tx-11 font-weight-bold mb-0 text-uppercase">Lives:</label>
-                                    <p className="text-muted">{txtCountry}</p>
-                                </div>
-                                <div className="mt-3">
-                                    <label className="tx-11 font-weight-bold mb-0 text-uppercase">Email:</label>
-                                    <p className="text-muted">{txtEmail}</p>
-                                </div>
-                                <div className="mt-3">
-                                    <label className="tx-11 font-weight-bold mb-0 text-uppercase">Gender:</label>
-                                    <p className="text-muted">{txtGender}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
+                    <SideBar {...objProps} />
+                
                     <div className="col-md-8 col-xl-6 middle-wrapper">
                         <div className="row">
                             <div className="col-md-12 grid-margin">
